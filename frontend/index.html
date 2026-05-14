@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpportunityOS AI — Career Tracking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">OpportunityOS <span>AI</span></div>
+            <div class="subtitle">AI-powered internship and career tracking system</div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Saved Jobs</a>
+            <a href="#">Applications</a>
+            <a href="#" id="navExport">Export</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Find internships and fresher opportunities smarter</h1>
+            <p>Track nearby openings, FAANG opportunities, and application progress with AI-powered automation.</p>
+            <div class="hero-btns">
+                <button class="btn btn-primary" id="startTrackingBtn">Start Tracking</button>
+                <button class="btn btn-secondary" onclick="exportData('excel')">Export Excel</button>
+            </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <label>Total Opportunities</label>
+                <div class="value" id="totalJobsCount">0</div>
+            </div>
+            <div class="stat-card">
+                <label>Applied</label>
+                <div class="value" id="appliedCount">0</div>
+            </div>
+            <div class="stat-card">
+                <label>Interviews</label>
+                <div class="value" id="interviewCount">0</div>
+            </div>
+            <div class="stat-card">
+                <label>Saved Jobs</label>
+                <div class="value" id="savedCount">0</div>
+            </div>
+        </section>
+
+        <!-- Filter Panel -->
+        <section class="filter-panel">
+            <div class="filter-grid">
+                <div class="input-group">
+                    <label>Preferred Location</label>
+                    <input type="text" id="locationInput" placeholder="e.g. Remote, San Francisco">
+                </div>
+                <div class="input-group">
+                    <label>Experience Level</label>
+                    <select id="experienceInput">
+                        <option value="internship">Internship</option>
+                        <option value="fresher">Fresher</option>
+                        <option value="0-6-months">0–6 Months</option>
+                        <option value="1-year">1 Year</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Role Keywords</label>
+                    <input type="text" id="roleInput" placeholder="e.g. Software Engineer, UI/UX">
+                </div>
+                <div class="input-group">
+                    <label>Company Names</label>
+                    <input type="text" id="companyInput" placeholder="e.g. Google, Nvidia">
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="btn btn-primary" id="searchBtn">Search Opportunities</button>
+                <button class="btn btn-secondary" id="resetBtn">Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Live Console -->
+        <section class="console-wrapper">
+            <h3>Agent Activity Logs</h3>
+            <div id="logsContainer" class="terminal">
+                <div class="log-entry system">> Initializing AI agent...</div>
+                <div class="log-entry">> Waiting for search request...</div>
+            </div>
+        </section>
+
+        <!-- Opportunity Table -->
+        <section class="table-section">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Location</th>
+                            <th>Experience</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Apply Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jobsTableBody">
+                        <!-- JS renders rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Export Buttons -->
+        <section class="export-section">
+            <button class="btn btn-secondary" id="exportExcelBtn">Export Excel</button>
+            <button class="btn btn-secondary" id="exportCsvBtn">Export CSV</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with AI automation and agent workflows</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
