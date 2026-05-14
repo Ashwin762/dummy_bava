@@ -1,0 +1,46 @@
+[
+	{
+		"id": "g-001",
+		"title": "Software Engineering Intern",
+		"company": "Google",
+		"location": "Bengaluru, India",
+		"experience": "0-1 years",
+		"is_internship": true,
+		"skills": ["Python", "Data Structures", "Algorithms"],
+		"url": "https://careers.google.com/jobs/results/",
+		"posted_date": "2026-05-01"
+	},
+	{
+		"id": "m-001",
+		"title": "Software Engineer I",
+		"company": "Microsoft",
+		"location": "Hyderabad, India",
+		"experience": "1-2 years",
+		"is_internship": false,
+		"skills": ["C#", ".NET", "Azure"],
+		"url": "https://jobs.careers.microsoft.com/",
+		"posted_date": "2026-05-03"
+	},
+	{
+		"id": "n-001",
+		"title": "AI/ML Intern",
+		"company": "NVIDIA",
+		"location": "Pune, India",
+		"experience": "0-1 years",
+		"is_internship": true,
+		"skills": ["Python", "PyTorch", "Machine Learning"],
+		"url": "https://www.nvidia.com/en-in/about-nvidia/careers/",
+		"posted_date": "2026-05-08"
+	},
+	{
+		"id": "i-001",
+		"title": "Backend Engineer",
+		"company": "Intel",
+		"location": "Bengaluru, India",
+		"experience": "2-4 years",
+		"is_internship": false,
+		"skills": ["Python", "FastAPI", "SQL"],
+		"url": "https://jobs.intel.com/",
+		"posted_date": "2026-05-10"
+	}
+]
